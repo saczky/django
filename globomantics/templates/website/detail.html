@@ -1,7 +1,18 @@
-<a href="{% url 'welcome' %}">Strona gowna</a>
+{% extends "base.html" %}
 
-<h1>{{meeting.title}}</h1>
+{% block title %} Szczegóły spotkania:{{meeting.title}}] {% endblock %}
+{% block content %}
+
+<h1>{{meeting.title}}</n1>
+
 <p>
+
 Spotkanie na {{meeting.date}}, o
+
 {{meeting.start_time}}.
+
 </p>
+
+<a href="{% url 'welcome' %}"> strona gtowna </a>
+
+{% endblock %}

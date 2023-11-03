@@ -1,11 +1,9 @@
-<body>
-
-    {% for r in rooms %}
-    
-    {{r.1d}} pokoj {{name}} o numerze {{r.room_number}} na {{r.floor}} pietrze
-    <br/>
-    
-    {% endfor %}
-    
-    </body>
-    
+{% extends "base.html" %}
+{% block title %} Lista pokoi {% endblock %}
+{% block content %}
+{% for r in rooms %}
+{{r}}
+<br/>
+{% endfor %}
+<a href="{% url 'welcome' %}"> strona gtowna </a>
+{% endblock %}
